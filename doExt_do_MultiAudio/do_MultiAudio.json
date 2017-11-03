@@ -1,0 +1,123 @@
+{
+  "ID": "do_MultiAudio",
+  "IsContainer": "0",
+  "Type": "MM",
+  "UIType": "Layout",
+  "Name": "多音频播放",
+  "Version": "Internal",
+  "Description": "多音频播放，能支持播放mp3、amr、aac格式的本地和网络音频",
+  "Icon": "",
+  "BBS": "",
+  "Keyword": "",
+  "IOS": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Android": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Windows": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "WindowsPhone": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Html": {
+    "Support": 1,
+    "MinVersion": "5.0"
+  },
+  "Properties": [],
+  "Events": [
+    {
+      "ID": "error",
+      "Description": "音频播放错误时触发",
+      "ReturnType": "String",
+      "ReturnType_JavaScript": "String",
+      "ReturnDesc": "",
+      "Deprecated": false
+    },
+    {
+      "ID": "playFinished",
+      "Description": "音频播放结束后触发",
+      "ReturnType": "String",
+      "ReturnType_JavaScript": "String",
+      "ReturnDesc": "",
+      "Deprecated": false
+    },
+    {
+      "ID": "playProgress",
+      "Description": "",
+      "ReturnType": "Node",
+      "ReturnType_JavaScript": "Node",
+      "ReturnDesc": "返回音频总时间和当前播放时间{currentTime,totalTime}，单位为毫秒",
+      "Deprecated": false
+    }
+  ],
+  "syncMethodes": [
+    {
+      "ID": "pause",
+      "Name": "暂停播放",
+      "Description": "",
+      "ReturnType": "Number",
+      "ReturnType_JavaScript": "Number",
+      "ReturnDesc": "返回暂停时播放到第几毫秒",
+      "Paras": [],
+      "Deprecated": false
+    },
+    {
+      "ID": "play",
+      "Name": "开始播放",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnType_JavaScript": "",
+      "ReturnDesc": "",
+      "Paras": [
+        {
+          "ID": "path",
+          "Name": "播放文件源路径",
+          "Type": "String",
+          "Type_JavaScript": "String",
+          "Required": 1,
+          "DefaultValue": "",
+          "Description": "支持data://、source://和网络链接",
+          "Deprecated": false
+        },
+        {
+          "ID": "point",
+          "Name": "播放起点",
+          "Type": "Number",
+          "Type_JavaScript": "Number",
+          "Required": 0,
+          "DefaultValue": "",
+          "Description": "从最开始的第几毫秒",
+          "Deprecated": false
+        }
+      ],
+      "Deprecated": false
+    },
+    {
+      "ID": "resume",
+      "Name": "继续播放",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnType_JavaScript": "",
+      "ReturnDesc": "",
+      "Paras": [],
+      "Deprecated": false
+    },
+    {
+      "ID": "stop",
+      "Name": "停止播放",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnType_JavaScript": "",
+      "ReturnDesc": "",
+      "Paras": [],
+      "Deprecated": false
+    }
+  ],
+  "asyncMethodes": []
+}
